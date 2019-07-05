@@ -2,16 +2,16 @@
 namespace IoC.ShareApplication
 {
     /// <summary>
-    /// Класс реализует отправку сообщений через СМС
+    /// Реализует отправку сообщений в Telegram
     /// </summary>
-    public class BySMS : IShareApplication
+    public class ByTelegram : IShareApplication
     {
         /// <summary>
         /// Отправляет сообщение пользователю
         /// </summary>
         public void Share()
         {
-            Console.WriteLine("Sended by SMS");
+            Console.WriteLine("Sended by Telegram");
         }
     }
 }

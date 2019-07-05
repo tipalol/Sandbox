@@ -2,16 +2,16 @@
 namespace IoC.ShareApplication
 {
     /// <summary>
-    /// Класс реализует отправку сообщений через СМС
+    /// Класс реализует отправку сообщений по Email
     /// </summary>
-    public class BySMS : IShareApplication
+    public class ByEmail : IShareApplication
     {
         /// <summary>
         /// Отправляет сообщение пользователю
         /// </summary>
         public void Share()
         {
-            Console.WriteLine("Sended by SMS");
+            Console.WriteLine("Sended by Email");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IoC.Gallery;
+using IoC.ShareApplication;
 
 namespace IoC
 {
@@ -6,7 +7,12 @@ namespace IoC
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //В качестве способа отправки выбираем отправку по SMS
+            var shareApplication = new BySMS();
+            //Передаем в конструктор выбранный способ
+            var gallery = new GalleryApplication( shareApplication );
+            
+            gallery.Share();
         }
     }
 }
