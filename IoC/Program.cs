@@ -9,7 +9,7 @@ namespace IoC
         {
             //В качестве способа отправки выбираем отправку по SMS
             var shareApplication = new BySMS();
-            //Передаем в конструктор выбранный способ
+            //Производим Dependency Injection (DI)
             var gallery = new GalleryApplication( shareApplication );
             
             gallery.Share();
